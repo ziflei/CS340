@@ -9,6 +9,10 @@ SET AUTOCOMMIT = 0;
 
 ... [your SQL goes here]
 
+***************************************************************
+**                         Customers                         **
+***************************************************************
+
 CREATE TABLE IF NOT EXISTS Customers (
 	customer_id int(15) NOT NULL AUTO_INCREMENT,
 	customer_name varchar(20) NOT NULL,
@@ -17,12 +21,21 @@ CREATE TABLE IF NOT EXISTS Customers (
 	PRIMARY KEY (customer_id)
 );
 
+***************************************************************
+**                         Bobas                             **
+***************************************************************
+
 CREATE TABLE IF NOT EXISTS Bobas (
     	product_id int(10) NOT NULL AUTO_INCREMENT,
     	product_name varchar(25) NOT NULL,
     	product_price decimal(10,2),
     	PRIMARY KEY (product_id)
 );
+
+
+***************************************************************
+**                         Employee                          **
+***************************************************************
 
 CREATE TABLE IF NOT EXISTS Employee (
     	employee_id int(10) NOT NULL AUTO_INCREMENT,
@@ -33,6 +46,9 @@ CREATE TABLE IF NOT EXISTS Employee (
    	PRIMARY KEY (employee_id)
 );
 
+***************************************************************
+**                    	 Order_has_bobas                     **
+***************************************************************
 CREATE TABLE IF NOT EXISTS Order_has_bobas (
 	order_id int(15) NOT NULL,
     	product_id int(10),
@@ -41,6 +57,10 @@ CREATE TABLE IF NOT EXISTS Order_has_bobas (
     	FOREIGN KEY (product_id)
     	REFERENCES Bobas(product_id)
 );
+
+***************************************************************
+**                         Orders                            **
+***************************************************************
 
 CREATE TABLE IF NOT EXISTS Orders (
 	order_id int(15) NOT NULL AUTO_INCREMENT,
@@ -53,6 +73,41 @@ CREATE TABLE IF NOT EXISTS Orders (
     	FOREIGN KEY (employee_id)
     	REFERENCES Employee(employee_id)
 );
+
+INSERT INTO Customers (customer_id, customer_name, customer_phone, customer_email)
+VALUES ('1', 'Levi Cruz', '(695) 717-5798', 'levi.cruz@example.com'),
+('2', 'Kelly Duncan', ,'kelly.duncan@example.com'),
+('3', 'Clifford Schmidt', '(725) 868-5931', ),
+('4', 'Adrian Thompson', , ),
+('5', 'Terrence Stevens', '(840) 416-3086', 'terrence.stevens@example.com';
+
+INSERT INTO Bobas (product_id, product_name, product_price)
+VALUES ('6', 'Herbal Tea', 7.95),
+('7', 'Tiger Sugar Boba', 8.95),
+('8', ),
+('9'),
+('10');
+
+INSERT INTO Employee (employee_id, employee_name, job_title, birthdate, salary)
+VALUES (),
+(),
+(),
+(),
+();
+
+INSERT INTO Order_has_bobas (order_id, product_id)
+VALUES (),
+(),
+(),
+(),
+();
+
+INSERT INTO Orders (order_id, customer_id, employee_id, order_date)
+VALUES (),
+(),
+(),
+(),
+();
 
 SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
