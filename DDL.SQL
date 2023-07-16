@@ -96,18 +96,18 @@ VALUES ('001', 'Constance Fowler', 'Barista', 1945-01-03, 12345),
 ('005', 'Hailey King', 'Owner' 1944/12/05, 56789);
 
 INSERT INTO Order_has_bobas (order_id, product_id)
-VALUES (),
-(),
-(),
-(),
-();
+VALUES ('01', '7'),
+('02', '9'),
+('03', '6'),
+('04', '8'),
+('05', '10');
 
 INSERT INTO Orders (order_id, customer_id, employee_id, order_date)
-VALUES (),
-(),
-(),
-(),
-();
+VALUES ('01', '1', '001', 2023-01-01),
+('02', '2', '005', 2023-02-12),
+('03', '4', '002', 2023-03-23),
+('04', '3', '004', 2023-04-14),
+('05', '5', '003', 2023-05-17);
 
 SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
