@@ -17,13 +17,29 @@ CREATE TABLE IF NOT EXISTS Customers (
 	PRIMARY KEY (customer_id)
 );
 
+CREATE TABLE IF NOT EXISTS Bobas (
+    	product_id int(10) NOT NULL AUTO_INCREMENT,
+    	product_name varchar(25) NOT NULL,
+    	product_price decimal(10,2),
+    	PRIMARY KEY (product_id)
+);
+
+CREATE TABLE IF NOT EXISTS Employee (
+    	employee_id int(10) NOT NULL AUTO_INCREMENT,
+	employee_name varchar(20) NOT NULL,
+    	job_title varchar(15) NOT NULL,
+   	birthdate date NOT NULL,
+   	salary decimal(15,2),
+   	PRIMARY KEY (employee_id)
+);
+
 CREATE TABLE IF NOT EXISTS Order_has_bobas (
 	order_id int(15) NOT NULL,
-    product_id int(10),
-    FOREIGN KEY (order_id)
-    REFERENCES Orders(order_id),
-    FOREIGN KEY (product_id)
-    REFERENCES Bobas(product_id)
+    	product_id int(10),
+    	FOREIGN KEY (order_id)
+    	REFERENCES Orders(order_id),
+    	FOREIGN KEY (product_id)
+    	REFERENCES Bobas(product_id)
 );
 
 CREATE TABLE IF NOT EXISTS Orders (
