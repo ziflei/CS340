@@ -84,13 +84,13 @@ VALUES ('1', 'Levi Cruz', '(695) 717-5798', 'levi.cruz@example.com'),
 INSERT INTO Bobas (product_id, product_name, product_price)
 VALUES ('6', 'Herbal Tea', 7.95),
 ('7', 'Tiger Sugar Boba', 8.95),
-('8', ),
-('9'),
-('10');
+('8', 'Black Milk Tea', 6.99),
+('9', 'Green Milk Tea', 6.99),
+('10', 'Honey Lemon Tea', 5.99);
 
 INSERT INTO Employee (employee_id, employee_name, job_title, birthdate, salary)
-VALUES (),
-(),
+VALUES ('001', 'Constance Fowler', 'Barista', 1945-01-03, 12345),
+('002', 'Luke Smith', 'Lead Barista', 1967-01-06, 23456),
 (),
 (),
 ();
