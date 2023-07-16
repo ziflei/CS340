@@ -24,6 +24,7 @@ customer_id int(15) NOT NULL AUTO_INCREMENT,
   customer_email varchar(50),
   PRIMARY KEY (customer_id)
 );
+dsaf
 
 SET FOREIGN_KEY_CHECKS=1;
 COMMIT;
