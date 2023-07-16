@@ -17,11 +17,19 @@ CREATE TABLE IF NOT EXISTS Customers (
 	PRIMARY KEY (customer_id)
 );
 
+CREATE TABLE IF NOT EXISTS Order_has_bobas (
+	order_id int(15) NOT NULL,
+    product_id int(10),
+    FOREIGN KEY (order_id)
+    REFERENCES Orders(order_id),
+    FOREIGN KEY (product_id)
+    REFERENCES Bobas(product_id)
+);
+
 CREATE TABLE IF NOT EXISTS Orders (
 	order_id int(15) NOT NULL AUTO_INCREMENT,
 	customer_id int(15) NOT NULL,
 	employee_id int(10) NOT NULL,
-	product_id int(10) NOT NULL,
 	order_date date NOT NULL,
 	PRIMARY KEY (order_id),
     	FOREIGN KEY (customer_id)
