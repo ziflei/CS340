@@ -31,7 +31,6 @@ CREATE TABLE IF NOT EXISTS Bobas (
     	product_price decimal(10,2),
     	PRIMARY KEY (product_id)
 );
---temp--
 
 
 ***************************************************************
@@ -92,9 +91,9 @@ VALUES ('6', 'Herbal Tea', 7.95),
 INSERT INTO Employee (employee_id, employee_name, job_title, birthdate, salary)
 VALUES ('001', 'Constance Fowler', 'Barista', 1945-01-03, 12345),
 ('002', 'Luke Smith', 'Lead Barista', 1967-01-06, 23456),
-(),
-(),
-();
+('003', 'Mason Beck', 'Manager', 1955-11-03, 34567),
+('004', 'Frank Soto', 'General Manager', 1968-10-07, 45678),
+('005', 'Hailey King', 'Owner' 1944/12/05, 56789);
 
 INSERT INTO Order_has_bobas (order_id, product_id)
 VALUES (),
