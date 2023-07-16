@@ -31,6 +31,7 @@ CREATE TABLE IF NOT EXISTS Bobas (
     	product_price decimal(10,2),
     	PRIMARY KEY (product_id)
 );
+--temp--
 
 
 ***************************************************************
